@@ -1,0 +1,152 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="araba.master.cs" Inherits="ArabaSitesi_2213201042_KadirKarakurt.araba" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1024px;
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        .auto-style2 {
+            text-align: right;
+        }
+
+        .auto-style4 {
+            width: 1011px;
+            height: 284px;
+        }
+
+        .auto-style5 {
+            height: 26px;
+        }
+
+        .auto-style6 {
+            text-align: center;
+        }
+
+        .auto-style7 {
+            height: 267px;
+        }
+        .auto-style8 {
+            width: 100px;
+        }
+        .auto-style9 {
+            height: 26px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table align="center" class="auto-style1">
+                <tr>
+                    <td class="auto-style2" colspan="4">
+                        <a href="yonetimPaneli/WebForm1.aspx">Admin Paneli</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <img src="images/banner.jpg" class="auto-style4" /></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <asp:Menu ID="Menu1" runat="server" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Medium" ForeColor="#7C6F57" Orientation="Horizontal" StaticSubMenuIndent="10px" Width="1024px">
+                            <DynamicHoverStyle BackColor="#7C6F57" Font-Size="X-Large" ForeColor="White" Width="1024px" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicMenuStyle BackColor="#F7F6F3" />
+                            <DynamicSelectedStyle BackColor="#5D7B9D" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="default.aspx" Text="Anasayfa" Value="Anasayfa"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="kayit.aspx" Text="Kayıt" Value="Yeni Öğe"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="audi.aspx" Text="Audi" Value="Yeni Öğe"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="bmw.aspx" Text="BMW" Value="Yeni Öğe"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="honda.aspx" Text="Honda" Value="Yeni Öğe"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="mercedes.aspx" Text="Mercedes" Value="Yeni Öğe"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="volkswagen.aspx" Text="Volkswagen" Value="Yeni Öğe"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="iletisim.aspx" Text="İletişim" Value="Yeni Öğe"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticSelectedStyle BackColor="#5D7B9D" />
+                        </asp:Menu>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100">Hoşgeldin,<br />
+                        <asp:Label ID="lblKullaniciAdi" runat="server" Text="Label"></asp:Label>
+                    </td>
+                    <td class="auto-style8">
+                        <asp:Button ID="btnOturumKapat" runat="server" Text="Oturum Kapat" OnClick="btnOturumKapat_Click" />
+                    </td>
+                    <td width="410" rowspan="6">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            <p>
+                                &nbsp;</p>
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td width="410" rowspan="6">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblKul" runat="server" Text="Kullanıcı Adı: "></asp:Label>
+                    </td>
+                    <td class="auto-style8">
+                        <asp:TextBox ID="txtKullaniciAdi" runat="server" BackColor="Black" ForeColor="White"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style5">
+                        <asp:Label ID="lblSifre" runat="server" Text="Şifre: "></asp:Label>
+                    </td>
+                    <td class="auto-style9">
+                        <asp:TextBox ID="txtSifre" runat="server" BackColor="Black" ForeColor="White"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="auto-style8">
+                        <asp:Button ID="btnGiris" runat="server" Text="Giriş Yap" OnClick="btnGiris_Click" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style5" colspan="2">
+                        <asp:Label ID="lblMesaj" runat="server" Text="lblMesaj"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="auto-style7" style="background-color: #FFFFFF; text-align: center;">
+                        &nbsp;&nbsp;&nbsp;
+                        <div style="display: inline-block;">
+                            <asp:Menu ID="Menu2" runat="server" StaticSubMenuIndent="16px" Width="200px" Font-Size="X-Large">
+                                <Items>
+                                    <asp:MenuItem Text="Audi" Value="Audi"></asp:MenuItem>
+                                    <asp:MenuItem Text="BMW" Value="BMW"></asp:MenuItem>
+                                    <asp:MenuItem Text="Honda" Value="Honda"></asp:MenuItem>
+                                    <asp:MenuItem Text="Mercedes" Value="Mercedes"></asp:MenuItem>
+                                    <asp:MenuItem Text="Volkswagen" Value="Volkswagen"></asp:MenuItem>
+                                </Items>
+                            </asp:Menu>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style6" colspan="4" style="background-color: #000000; color: #FFFFFF;">
+                    Görsel Programlama II Dersi (C) 2024               
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
